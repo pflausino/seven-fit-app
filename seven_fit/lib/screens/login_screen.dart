@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seven_fit/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -145,13 +146,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 12,
                     fontWeight: FontWeight.normal),
               ),
-              Text(
-                "Criar Conta ",
-                style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    decoration: TextDecoration.underline),
+              FlatButton(
+                child: Text(
+                  "Criar Conta ",
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      decoration: TextDecoration.underline),
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SignUpScreen()));
+                },
               )
             ],
           )
